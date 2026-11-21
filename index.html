@@ -1,0 +1,1787 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nursing Journey — Student Portfolio</title>
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/img/logo.png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              paper: "#FFF8F7",
+              ink: "#3B1117",
+              forest: "#8F1D2C",
+              orange: "#C43D4B",
+              muted: "#8B6F73",
+              line: "#E9C9CD",
+            },
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-paper text-ink antialiased">
+    <!-- ================= NAVBAR ================= -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-paper/90 backdrop-blur-md border-b border-line"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-6 lg:px-10 h-[76px] flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3">
+          <div
+            class="w-9 h-9 bg-forest text-paper rounded-full flex items-center justify-center font-serif text-lg"
+          >
+            <img
+              src="/img/logo.png"
+              alt="Logo"
+              class="w-6 h-6 object-contain"
+              />
+          </div>
+          <div>
+            <p class="font-bold text-sm tracking-tight">NURSING PORTFOLIO</p>
+            <p class="text-[10px] text-muted tracking-[2px] uppercase">
+              Caring together
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop navigation -->
+        <div class="hidden lg:flex items-center gap-7 text-sm">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#profile" class="nav-link">Group Profile</a>
+          <a href="#members" class="nav-link">Members</a>
+          <a href="activities.html" class="nav-link">Activities</a>
+          <a href="#reflection" class="nav-link">Reflection</a>
+          <a href="#learning" class="nav-link">Learning</a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button
+          id="menuButton"
+          class="hamburger lg:hidden flex flex-col gap-[4px] p-2"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="w-6 h-[2px] bg-ink block"></span>
+          <span class="w-6 h-[2px] bg-ink block"></span>
+          <span class="w-6 h-[2px] bg-ink block"></span>
+        </button>
+      </nav>
+
+      <!-- Mobile navigation -->
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-paper border-t border-line"
+      >
+        <div class="flex flex-col px-6 py-5 gap-5 text-sm">
+          <a href="#home" class="mobile-link">Home</a>
+          <a href="#profile" class="mobile-link">Group Profile</a>
+          <a href="#members" class="mobile-link">Members</a>
+          <a href="activities.html" class="mobile-link">Activities</a>
+          <a href="#reflection" class="mobile-link">Reflection</a>
+          <a href="#learning" class="mobile-link">Learning</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= HOME / HERO ================= -->
+    <section id="home" class="pt-36 pb-24 lg:pt-44 lg:pb-32 px-6 lg:px-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="reveal flex items-center gap-3 mb-8">
+          <span class="w-2 h-2 rounded-full bg-orange"></span>
+          <p class="uppercase tracking-[3px] text-xs text-muted">
+            A collection of our work, growth & experiences
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-10 items-end">
+          <div class="lg:col-span-8 reveal">
+            <h1
+              class="font-serif text-6xl md:text-8xl lg:text-[120px] leading-[0.95] tracking-tight"
+            >
+              Learning<br />
+              <span class="italic text-orange">together.</span>
+            </h1>
+          </div>
+
+          <div class="lg:col-span-4 reveal lg:pb-4">
+            <p class="text-muted text-lg leading-8 max-w-md">
+              Welcome to our student portfolio. This space reflects our shared
+              ideas, activities, discoveries, and the lessons we learned along
+              the way.
+            </p>
+            <a
+              href="#members"
+              class="inline-flex items-center gap-4 mt-7 group"
+            >
+              <span
+                class="w-12 h-12 rounded-full border border-ink flex items-center justify-center group-hover:bg-ink group-hover:text-paper transition-all duration-300"
+              >
+                ↘
+              </span>
+              <span class="text-sm font-semibold">Get to know our group</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero image -->
+        <div
+          class="reveal mt-16 relative overflow-hidden rounded-sm image-container"
+        >
+          <img
+            src="/img/cgh.png"
+            alt="Students working together in a classroom"
+            class="image-hover w-full h-[350px] md:h-[520px] object-cover"
+          />
+          <div class="absolute inset-0 bg-ink/20"></div>
+          <div
+            class="absolute bottom-6 left-6 md:bottom-10 md:left-10 text-white"
+          >
+            <p class="text-xs uppercase tracking-[3px] mb-3">Our journey</p>
+            <h2 class="font-serif text-3xl md:text-5xl">
+              Ideas become meaningful<br />when shared.
+            </h2>
+          </div>
+          <div
+            class="absolute top-6 right-6 border border-white/50 rounded-full px-4 py-2 text-xs text-white"
+          >
+            Academic Year 2026–2027
+          </div>
+        </div>
+
+        <!-- Introduction -->
+        <div class="grid md:grid-cols-12 gap-8 mt-20 reveal">
+          <div class="md:col-span-3">
+            <p class="uppercase tracking-[2px] text-xs text-muted">
+              Introduction
+            </p>
+          </div>
+
+          <div class="md:col-span-6">
+            <h2 class="font-serif text-3xl md:text-4xl leading-snug mb-6">
+              More than just a group. A shared experience.
+            </h2>
+            <p class="text-muted leading-8">
+              We are a group of students who come together with different
+              perspectives, skills, and ideas. Through collaboration,
+              creativity, and determination, we turn individual efforts into
+              meaningful work. This portfolio documents who we are, what we do,
+              and how we continue to grow as learners.
+            </p>
+          </div>
+
+          <div class="md:col-span-3 flex flex-col justify-end gap-2">
+            <div class="border-t border-line pt-4">
+              <p class="text-3xl font-serif">01</p>
+              <p class="text-xs text-muted mt-1">Shared purpose</p>
+            </div>
+            <div class="border-t border-line pt-4">
+              <p class="text-3xl font-serif">∞</p>
+              <p class="text-xs text-muted mt-1">Room to grow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MEMBERS OVERVIEW ================= -->
+    <section id="members" class="py-24 bg-white px-6 lg:px-10">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-12 reveal"
+        >
+          <div>
+            <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+              The people
+            </p>
+            <h2 class="font-serif text-5xl md:text-6xl text-center p-4">Meet our members.</h2>
+                <p class="text-muted w-full leading-7">
+          Our group is composed of nursing students currently taking N 104 – Community Health Nursing I Lecture. Throughout the course, we have worked together in completing various learning activities, participating in discussions, conducting research, and exploring the different concepts and principles of community health nursing. Through our shared experiences, we have developed a better understanding of the importance of family-centered care, health promotion, disease prevention, and community participation. As a group, we value cooperation, shared responsibility, and continuous learning as we work toward becoming competent, compassionate, and responsible future community health nurses.
+          </p>
+          </div>
+      
+        </div>
+
+        <!-- Member cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Member 1 -->
+          <div class="reveal group">
+            <div class="image-container overflow-hidden bg-paper aspect-[4/5]">
+              <img
+                src="/img/918253234_1136982635865788_6075743647831113075_n.jpg"
+                alt="Group member 1"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-start mt-5">
+              <div>
+                <h3 class="font-semibold text-lg">Mendoza, Tyrelle</h3>
+                <p class="text-sm text-muted mt-1">
+                 <span class="text-orange">Group Leader</span><br />
+                Group Coordinator
+                Paper Editor
+                Delegates Taks
+                </p>
+              </div>
+              <span class="text-orange">01</span>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="reveal group">
+            <div class="image-container overflow-hidden bg-paper aspect-[4/5]">
+              <img
+                src="/img/916619186_2314035366039769_8295193481035587071_n.jpg"
+                alt="Group member 2"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-start mt-5">
+              <div>
+                <h3 class="font-semibold text-lg">Lao, Frederich</h3>
+                <p class="text-sm text-muted mt-1">
+                 <span class="text-orange">Member</span><br />
+                </p>
+               
+              </div>
+              <span class="text-orange">02</span>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="reveal group">
+            <div class="image-container overflow-hidden bg-paper aspect-[4/5]">
+              <img
+                src="/img/lira.jpg"
+                alt="Group member 3"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-start mt-5">
+              <div>
+                <h3 class="font-semibold text-lg">Panaligan, Lira</h3>
+                <p class="text-sm text-muted mt-1">
+                 <span class="text-orange">Member</span><br />
+                </p>
+              </div>
+              <span class="text-orange">03</span>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="reveal group">
+            <div class="image-container overflow-hidden bg-paper aspect-[4/5]">
+              <img
+                src="/img/lizzie.jpg"
+                alt="Group member 4"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-start mt-5">
+              <div>
+                <h3 class="font-semibold text-lg">Masgong, Lizzie</h3>
+                 <p class="text-sm text-muted mt-1">
+                 <span class="text-orange">Member</span><br />
+                </p>
+               
+              </div>
+              <span class="text-orange">04</span>
+            </div>
+          </div>
+
+           <div class="reveal group">
+            <div class="image-container overflow-hidden bg-paper aspect-[4/5]">
+              <img
+                src="/img/lumbre.jpg"
+                alt="Group member 4"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-start mt-5">
+              <div>
+                <h3 class="font-semibold text-lg">Lumbre, Dhanilo Justin</h3>
+                 <p class="text-sm text-muted mt-1">
+                 <span class="text-orange">Member</span><br />
+                </p>
+               
+              </div>
+              <span class="text-orange">05</span>
+            </div>
+          </div>
+
+         <!-- Member 6 -->
+          <div class="reveal group">
+            <div class="image-container overflow-hidden bg-paper aspect-[4/5]">
+              <img
+                src="/img/malimban.jpg"
+                alt="Group member 4"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-start mt-5">
+              <div>
+                <h3 class="font-semibold text-lg">Malimban, Jilyan Jade</h3>
+                 <p class="text-sm text-muted mt-1">
+                 <span class="text-orange">Member</span><br />
+                </p>
+              
+              </div>
+              <span class="text-orange">06</span>
+            </div>
+          </div>
+
+          <!-- Member 7 -->
+          <div class="reveal group">
+            <div class="image-container overflow-hidden bg-paper aspect-[4/5]">
+              <img
+                src="/img/mirasol.jpg"
+                alt="Group member 4"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-start mt-5">
+              <div>
+                <h3 class="font-semibold text-lg">Mirasol, Jazyll Criosa</h3>
+                 <p class="text-sm text-muted mt-1">
+                 <span class="text-orange">Member</span><br />
+                </p>
+              
+              </div>
+              <span class="text-orange">07</span>
+            </div>
+          </div>
+
+          <!-- Member 8 -->
+          <div class="reveal group">
+            <div class="image-container overflow-hidden bg-paper aspect-[4/5]">
+              <img
+                src="/img/noses.jpg"
+                alt="Group member 4"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-start mt-5">
+              <div>
+                <h3 class="font-semibold text-lg">Noses, Lois Marielle</h3>
+                 <p class="text-sm text-muted mt-1">
+                 <span class="text-orange">Member</span><br />
+                </p>
+              
+              </div>
+              <span class="text-orange">08</span>
+            </div>
+          </div>
+        
+
+          <!-- Member 9 -->
+          <div class="reveal group">
+            <div class="image-container overflow-hidden bg-paper aspect-[4/5]">
+              <img
+                src="/img/punsalan.jpg"
+                alt="Group member 4"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-start mt-5">
+              <div>
+                <h3 class="font-semibold text-lg">Punsalan, Marielle</h3>
+                 <p class="text-sm text-muted mt-1">
+                 <span class="text-orange">Member</span><br />
+                </p>
+              
+              </div>
+              <span class="text-orange">09</span>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        
+          
+      </div>
+    </section>
+
+    <!-- ================= ACTIVITIES OVERVIEW ================= -->
+    <section id="activity-preview" class="py-24 px-6 lg:px-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            What we do
+          </p>
+          <h2 class="font-serif text-5xl md:text-6xl leading-tight">
+            Experiences that<br />shape our learning.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+          <div class="activity-card reveal">
+            <div class="image-container overflow-hidden aspect-[4/3]">
+              <img
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80"
+                alt="Group collaboration activity"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-5">
+              <p class="text-xs uppercase tracking-[2px] text-orange">
+                01 / Collaboration
+              </p>
+              <h3 class="font-serif text-2xl mt-2">Working as one</h3>
+              <p class="text-muted text-sm leading-7 mt-2">
+                Sharing ideas, listening to each other, and creating solutions
+                together.
+              </p>
+            </div>
+          </div>
+
+          <div class="activity-card reveal">
+            <div class="image-container overflow-hidden aspect-[4/3]">
+              <img
+                src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
+                alt="Students taking notes and learning"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-5">
+              <p class="text-xs uppercase tracking-[2px] text-orange">
+                02 / Discovery
+              </p>
+              <h3 class="font-serif text-2xl mt-2">
+                Learning through research
+              </h3>
+              <p class="text-muted text-sm leading-7 mt-2">
+                Exploring ideas, finding information, and understanding topics
+                beyond the classroom.
+              </p>
+            </div>
+          </div>
+
+          <div class="activity-card reveal">
+            <div class="image-container overflow-hidden aspect-[4/3]">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+                alt="Students presenting their work"
+                class="image-hover w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-5">
+              <p class="text-xs uppercase tracking-[2px] text-orange">
+                03 / Creativity
+              </p>
+              <h3 class="font-serif text-2xl mt-2">Turning ideas into work</h3>
+              <p class="text-muted text-sm leading-7 mt-2">
+                Applying what we learn through projects, presentations, and
+                creative outputs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal mt-12">
+          <a
+            href="activities.html"
+            class="inline-flex items-center gap-3 text-sm font-semibold group"
+          >
+            Explore all activities
+            <span
+              class="text-orange transition-transform group-hover:translate-x-2"
+              >→</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GROUP PROFILE ================= -->
+    <section id="profile" class="py-24 bg-forest text-paper px-6 lg:px-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-white/50 text-xs mb-4">
+          Our foundation
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Who we are<br />
+            <span class="italic text-orange">as a group.</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12 mt-20">
+          <!-- Mission -->
+          <div class="reveal border-t border-white/20 pt-6">
+            <span class="text-orange text-sm">01</span>
+            <h3 class="font-serif text-3xl mt-5">Our mission</h3>
+            <p class="text-white/65 leading-8 mt-5">
+           To work collaboratively in acquiring and applying the knowledge, skills, and values necessary for effective community health nursing practice. We aim to promote evidence-based learning, strengthen our understanding of family and community health needs, and develop a sense of responsibility, compassion, and dedication in providing quality nursing care.
+            </p>
+          </div>
+
+          <!-- Vision -->
+          <div class="reveal border-t border-white/20 pt-6">
+            <span class="text-orange text-sm">02</span>
+            <h3 class="font-serif text-3xl mt-5">Our vision</h3>
+            <p class="text-white/65 leading-8 mt-5">
+       To become a team of competent, compassionate, and socially responsible future nurses who are committed to promoting health, preventing diseases, and improving the well-being of individuals, families, and communities through collaborative and evidence-based nursing practice.
+            </p>
+          </div>
+
+          <!-- Learning goals -->
+          <div class="reveal border-t border-white/20 pt-6">
+            <span class="text-orange text-sm">03</span>
+            <h3 class="font-serif text-3xl mt-5">Our learning goals</h3>
+            <p class="text-white/65 leading-8 mt-5">
+             As a group, we aim to:
+             1.Develop a comprehensive understanding of the fundamental concepts, principles, and responsibilities of Community Health Nursing.
+             2.Strengthen our ability to assess family and community health needs and identify existing health concerns.
+             3.Apply the Family Nursing Process in developing appropriate and effective nursing interventions.
+             4.Apply the Family Nursing Process in developing appropriate and effective nursing interventions.
+             5.Enhance our communication, teamwork, collaboration, and critical-thinking skills through various learning activities.
+             6.Recognize the importance of health promotion, disease prevention, and community participation in improving health outcomes.
+             7.Develop professional values, compassion, accountability, and a commitment to continuous learning as future community health nurses.
+            </p>
+          </div>
+        </div>
+
+        <!-- Quote -->
+        <!-- <div class="reveal border-t border-white/20 mt-20 pt-10">
+          <p
+            class="font-serif italic text-2xl md:text-4xl text-white/80 max-w-4xl leading-relaxed"
+          >
+            “We believe that growth happens when people share what they know and
+            learn from what they don't.”
+          </p>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- ================= ROLES & RESPONSIBILITIES ================= -->
+  
+    <!-- ================= ACTIVITIES PAGE / SECTION ================= -->
+ 
+
+    <!-- ================= REFLECTION ================= -->
+
+    <!-- ================= PERSONAL LEARNING ================= -->
+    <section id="learning" class="py-24 bg-[#FBEAEC] px-6 lg:px-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            Individual growth
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Personal learning<br />summaries.
+          </h2>
+          <p class="text-muted max-w-xl mt-6 leading-8">
+            Beyond our shared achievements, each member has their own learning
+            experience, challenges, and personal takeaways.
+          </p>
+        </div>
+
+        <!-- Personal summary cards -->
+        <div class="grid md:grid-cols-2 gap-5 mt-14">
+          <!-- Person 1 -->
+          <article class="reveal bg-paper p-8 md:p-10">
+            <div class="flex gap-5 items-center">
+              <img
+                src="/img/916619186_2314035366039769_8295193481035587071_n.jpg"
+                alt="Member portrait"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <p class="text-xs text-orange uppercase tracking-[2px]">
+                  Member 01
+                </p>
+                <h3 class="font-serif text-2xl mt-1">Lao, Frederich M.</h3>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs uppercase tracking-[2px] text-muted">
+                My learning summary
+              </p>
+              <p class="leading-8 text-muted mt-3">
+                If there is one thing Community Health Nursing I has taught me,
+                it is that healthcare does not begin and end within the four
+                walls of a hospital; sometimes, its greatest impact begins at
+                the doorstep of a family. This course broadened my understanding
+                of nursing by showing me that behind every health concern is a
+                person shaped by a family, a community, and circumstances that
+                are not always visible in a clinical setting. I learned that
+                being a nurse means looking beyond diseases and recognizing the
+                social, economic, cultural, and environmental realities that
+                influence people's health. More than acquiring knowledge, I
+                began to understand the responsibility that comes with being
+                entrusted with the well-being of others. The Family Nursing
+                Process taught me that meaningful care must begin with
+                understanding. Through systematic assessment, identification of
+                health problems, planning, implementation, and evaluation,
+                nurses can develop interventions that address the actual needs
+                and priorities of families rather than simply impose solutions.
+                Meanwhile, evidence-based practice ensures that these
+                interventions are guided by credible research, sound clinical
+                judgment, and the family's unique circumstances. Together, these
+                approaches transform nursing care from mere instruction into
+                purposeful action; care that is appropriate, attainable, and
+                sustainable. Moving forward, I want to become a community health
+                nurse who does not simply recognize what a community lacks, but
+                also sees the strengths, resources, and potential it already
+                possesses. I want to be someone who listens without judgment,
+                educates with compassion, and advocates for those whose access
+                to healthcare remains limited. Because to me, the true measure
+                of nursing is not how many patients we treat, but how many lives
+                we empower to live healthier, safer, and more dignified lives.
+                And if I have learned anything from CHN I, it is that we do not
+                simply bring healthcare to the community; we help build a
+                community where health becomes a right that people can
+                understand, access, and sustain—not a privilege that only a few
+                can afford.
+              </p>
+            </div>
+          </article>
+
+          <!-- Person 2 -->
+          <article class="reveal bg-paper p-8 md:p-10">
+            <div class="flex gap-5 items-center">
+              <img
+                src="/img/lumbre.jpg"
+                alt="Member portrait"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <p class="text-xs text-orange uppercase tracking-[2px]">
+                  Member 02
+                </p>
+                <h3 class="font-serif text-2xl mt-1">
+                  Lumbre, Dhanilo Justin C.
+                </h3>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs uppercase tracking-[2px] text-muted">
+                My learning summary
+              </p>
+              <p class="leading-8 text-muted mt-3">
+                Before taking Community Health Nursing I, I pictured nursing as
+                something that happened inside hospitals, with patients in beds,
+                monitors beeping, and orders waiting to be carried out. I
+                believed that if a person was sick, they would come to us, and
+                our task was to treat them. This course changed that picture. I
+                learned that many health problems begin long before a person
+                ever reaches a clinic, and that some never reach one at all.
+                They quietly develop in kitchens, in streets, in water sources,
+                and in daily habits shaped by what a family can afford and what
+                they have been taught to believe. I realized that nursing does
+                not only wait for illness to arrive; it goes out to meet people
+                where they live. I also gained a new appreciation for primary
+                health care and the people who make it work. Barangay health
+                workers, midwives, and volunteers carry a quiet responsibility.
+                They know the households, remember who missed a checkup, and are
+                often the first to notice when something is wrong. Learning
+                about prevention, immunization, maternal and child health, and
+                early detection helped me see that the most effective care is
+                often the care given earliest. A vaccine given on time or a
+                danger sign recognized early can spare a family months of
+                suffering and expense. It taught me that prevention may not be
+                dramatic, but it is among the most powerful things a nurse can
+                offer. In the end, this course reminded me that a nurse's
+                responsibility extends beyond the walls of a hospital and beyond
+                the person in front of us. Community health nursing asks us to
+                be observant, collaborative, compassionate, and persistent, even
+                when progress is slow. As I continue my studies and look toward
+                serving communities of my own, I hope to remember that health is
+                built together, through partnerships with families, with local
+                leaders, and with fellow health workers. I want to become a
+                nurse who walks into a community not as someone with all the
+                answers, but as someone willing to learn, to serve, and to stay.
+                Because lasting change rarely arrives all at once. It grows from
+                small, consistent acts of care, shared with the people who need
+                them, and carried forward by the communities themselves.
+              </p>
+            </div>
+          </article>
+
+          <!-- Person 3 -->
+          <article class="reveal bg-paper p-8 md:p-10">
+            <div class="flex gap-5 items-center">
+              <img
+                src="/img/malimban.jpg"
+                alt="Member portrait"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <p class="text-xs text-orange uppercase tracking-[2px]">
+                  Member 03
+                </p>
+                <h3 class="font-serif text-2xl mt-1">
+                  Malimban, Jillyan Jade S.
+                </h3>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs uppercase tracking-[2px] text-muted">
+                My learning summary
+              </p>
+              <p class="leading-8 text-muted mt-3">
+                Taking CHN I has changed the way I understand nursing and the
+                kind of nurse I want to become. Before, I mostly thought that
+                being a nurse meant taking care of patients, assisting with
+                their needs, and helping them recover from illness. As I went
+                through this course, I realized that nursing goes beyond the
+                hospital setting. There are also people and families in the
+                community who need guidance, health education, and support to
+                prevent illnesses and maintain a healthy lifestyle. It made me
+                understand that sometimes, the most important part of nursing is
+                helping people recognize what they can do to take care of their
+                health even before they become sick. Throughout the course, I
+                learned about the importance of assessing the needs and health
+                conditions of families and communities. I also became more
+                familiar with the Family Nursing Process and how it provides a
+                guide for identifying problems, planning appropriate care,
+                carrying out interventions, and evaluating the results. At
+                first, these processes seemed like a lot to consider, but I
+                gradually understood why each step matters. I learned that we
+                cannot simply suggest solutions without first understanding the
+                situation of the people we are helping. Every family has its own
+                struggles, resources, and priorities, so we need to approach
+                them with patience and without judgment. I also gained a better
+                appreciation of Primary Health Care, Universal Health Care, and
+                evidence-based practice. These lessons reminded me that
+                healthcare should be accessible to everyone and that nurses have
+                an important role in making people aware of the services and
+                resources available to them. I realized, too, that the things we
+                teach and recommend should be supported by reliable information.
+                As a nursing student, I still have a lot to learn, but this
+                course has encouraged me to be more careful in the way I
+                understand health concerns and make decisions. More than the
+                concepts and lessons, CHN I taught me to look at people with a
+                wider perspective. I should not be too quick to judge their
+                health practices or choices without knowing what they are going
+                through. Not everyone has the same opportunities or resources to
+                maintain good health, and I think understanding this is an
+                important part of becoming a compassionate nurse. As I continue
+                my nursing journey, I hope to carry these lessons with me and
+                become someone who does not only provide care but also listens,
+                understands, and helps people make realistic improvements in
+                their health.
+              </p>
+            </div>
+          </article>
+
+          <!-- Person 4 -->
+          <article class="reveal bg-paper p-8 md:p-10">
+            <div class="flex gap-5 items-center">
+              <img
+                src="/img/lizzie.jpg"
+                alt="Member portrait"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <p class="text-xs text-orange uppercase tracking-[2px]">
+                  Member 04
+                </p>
+                <h3 class="font-serif text-2xl mt-1">
+                  Masgong, Lizzie France D.
+                </h3>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs uppercase tracking-[2px] text-muted">
+                My learning summary
+              </p>
+              <p class="leading-8 text-muted mt-3">
+                Throughout Community Health Nursing I, I learned that nursing
+                care goes beyond treating illnesses because it also involves
+                understanding the needs, experiences, and living conditions of
+                families and communities. As a nursing student, I realized that
+                every family has different health concerns, resources, and
+                challenges that we must consider when providing care. The Family
+                Nursing Process taught me how to assess family health needs,
+                identify problems, plan appropriate interventions, and evaluate
+                their effectiveness. Meanwhile, evidence-based practice reminded
+                me that the health teachings and nursing interventions we
+                provide should be supported by reliable research and accurate
+                information. These approaches help promote disease prevention,
+                health awareness, and better decision-making among families. CHN
+                I helped me understand the importance of being patient,
+                compassionate, and open-minded when dealing with different
+                people and situations. As a future Community Health Nurse, I
+                hope to apply these learnings by providing appropriate health
+                education, empowering families to take responsibility for their
+                health, and contributing to the well-being of the community. I
+                realized that even as a student, I can already make a difference
+                through the knowledge, care, and service I offer to others.
+              </p>
+            </div>
+          </article>
+
+          <!-- Person 5 -->
+          <article class="reveal bg-paper p-8 md:p-10">
+            <div class="flex gap-5 items-center">
+              <img
+                src="/img/918253234_1136982635865788_6075743647831113075_n.jpg"
+                alt="Member portrait"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <p class="text-xs text-orange uppercase tracking-[2px]">
+                  Member 04
+                </p>
+                <h3 class="font-serif text-2xl mt-1">Mendoza, Tyrelle L.</h3>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs uppercase tracking-[2px] text-muted">
+                My learning summary
+              </p>
+              <p class="leading-8 text-muted mt-3">
+                CHN I changed the way I look at nursing because I learned that
+                health does not depend only on medical treatment. It is also
+                influenced by the people we live with, our daily routines, and
+                the environment around us. Through our activities and
+                discussions, I realized that nurses need to understand what is
+                happening inside a family before deciding how to help them.
+                Sometimes, even a simple health problem can become difficult for
+                a family because of financial limitations, lack of knowledge, or
+                unhealthy practices. The Family Nursing Process taught me to
+                look beyond the identified illness and consider the family's
+                actual situation. It gives nurses a step-by-step way to
+                recognize problems and find practical solutions that families
+                can follow. Evidence-based practice, on the other hand, reminds
+                me that our decisions should be supported by reliable
+                information and research, not just personal opinions or
+                assumptions. Combining these two allows nurses to give families
+                guidance that is both appropriate to their needs and supported
+                by evidence. As a nursing student, I realized that community
+                health nursing requires more than knowledge; it also requires
+                patience, communication, and understanding. I may not be able to
+                solve every problem a family faces, but I can help them become
+                more aware of their health and make better decisions. This is
+                one of the biggest lessons I will carry with me: sometimes,
+                making a difference starts with taking the time to understand
+                people and helping them take small steps toward a healthier
+                life.
+              </p>
+            </div>
+          </article>
+
+          <!-- Person 6 -->
+          <article class="reveal bg-paper p-8 md:p-10">
+            <div class="flex gap-5 items-center">
+              <img
+                src="/img/mirasol.jpg"
+                alt="Member portrait"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <p class="text-xs text-orange uppercase tracking-[2px]">
+                  Member 06
+                </p>
+                <h3 class="font-serif text-2xl mt-1">
+                  Mirasol, Jazyll Criosa U.
+                </h3>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs uppercase tracking-[2px] text-muted">
+                My learning summary
+              </p>
+              <p class="leading-8 text-muted mt-3">
+                Throughout CHN I, I learned that community health nursing is not
+                only about caring for individuals but also about understanding
+                the needs, situations, and challenges of families and
+                communities. I realized that every family has different health
+                concerns, resources, and experiences, which is why nurses must
+                learn to assess their situations before providing care. Through
+                our activities, especially planning and conducting a home visit,
+                I understood how important the Family Nursing Process is. It
+                gives nurses a systematic way to identify family health
+                problems, set priorities, plan appropriate interventions, and
+                evaluate whether the care provided is effective. It also taught
+                me that building trust, communicating properly, and involving
+                family members in decision-making are important parts of
+                providing quality community health care. I also learned that
+                evidence-based practice helps nurses make better decisions by
+                using reliable research and combining it with their knowledge
+                and the needs of the family. Our activity on Family Health
+                Conversations showed me how research can guide nurses in helping
+                families communicate, express their concerns, and support one
+                another during health challenges. I realized that nursing care
+                should not rely only on what we already know but should also be
+                supported by current evidence and adjusted to the family’s
+                situation and available resources. Overall, CHN helped me
+                appreciate the importance of being patient, compassionate,
+                observant, and responsible as a future nurse. I hope to apply
+                these learnings by providing care that does not only focus on
+                illness but also promotes the health, safety, and well-being of
+                the entire family and community.
+              </p>
+            </div>
+          </article>
+
+          <!-- Person 7 -->
+          <article class="reveal bg-paper p-8 md:p-10">
+            <div class="flex gap-5 items-center">
+              <img
+                src="/img/noses.jpg"
+                alt="Member portrait"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <p class="text-xs text-orange uppercase tracking-[2px]">
+                  Member 07
+                </p>
+                <h3 class="font-serif text-2xl mt-1">
+                  Noses, Lois Marielle S.
+                </h3>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs uppercase tracking-[2px] text-muted">
+                My learning summary
+              </p>
+              <p class="leading-8 text-muted mt-3">
+                When I started Community Health Nursing I, I thought it would be
+                just nursing outside the hospital, which I was wrong. I learned
+                that CHN is about keeping people healthy before they get sick,
+                and that the whole family, not only the patient, is our client.
+                From the foundations, like Primary Health Care, Universal Health
+                Care, and the social determinants of health, I saw that a
+                person's health is shaped by income, environment, and access to
+                care, not only by illness. The Family Nursing Process helps us
+                care for families in an organized way. We assess through home
+                visits and data collection, name and prioritize the family's
+                health problems, plan using the Family Nursing Care Plan, give
+                health education and referrals, and then evaluate the results. I
+                think it improves health because it keeps us from guessing.
+                Instead of giving the same advice to everyone, we find out what
+                each family really needs and help them step by step. When many
+                families become healthier, the whole community does too.
+                Evidence-based practice makes our care safe and effective
+                because we use proven research, guidelines, and DOH programs,
+                like immunization and safe motherhood, instead of habits or
+                opinions. When we analyze a journal article, I learned how to
+                check the evidence and think about how it can fit into a care
+                plan. This helps make sure the programs we give to families and
+                communities really work. CHN I changed how I see nursing. I used
+                to focus on skills, but now I also see the value of listening,
+                understanding a family's situation, and respecting their
+                culture. I still have a lot to learn, but I feel more ready, and
+                I want to become a nurse who looks at the whole family, uses
+                evidence-based care, and helps communities grow healthier.
+              </p>
+            </div>
+          </article>
+
+          <!-- Person 8-->
+          <article class="reveal bg-paper p-8 md:p-10">
+            <div class="flex gap-5 items-center">
+              <img
+                src="/img/lira.jpg"
+                alt="Member portrait"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <p class="text-xs text-orange uppercase tracking-[2px]">
+                  Member 08
+                </p>
+                <h3 class="font-serif text-2xl mt-1">
+                  Panaligan, Lira Grace E.
+                </h3>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs uppercase tracking-[2px] text-muted">
+                My learning summary
+              </p>
+              <p class="leading-8 text-muted mt-3">
+                These activities helped me understand that community health
+                nursing goes beyond providing health instructions or managing a
+                patient’s condition. Among the activities we encountered, I
+                realized that caring for someone with diabetes requires more
+                than telling them what to eat or what habits to avoid. It also
+                means that we must understand their daily routines, personal
+                preferences, and willingness to make changes. Family involvement
+                is also just as important, but support should not mean that it
+                takes away a patient’s autonomy or independence. Instead, nurses
+                should advocate and openly communicate and help these troubled
+                families in making health decisions together. I also gained a
+                deeper appreciation for the importance of evidence-based
+                practice in improving community health. The discussions on
+                childhood immunization, the use of the Immunization Management
+                Information System, and diabetes self-management education
+                showed me that effective healthcare demands more than good
+                intentions. It needs a reliable basis of information, proper and
+                concrete planning, accessible services, and cooperation among
+                nurses, barangay health workers, families, and the community. It
+                came to my enlightenment that nurses must be willing to adapt to
+                approaches that would suit the actual needs and limitations of
+                the patients they care for. We must find the best possible ways
+                to achieve better health outcomes for our patients. This obliges
+                us to become someone who listens before giving informed advice,
+                comprehends before making judgements, and provides care that
+                considers each person’s circumstances. Not every problem can be
+                solved immediately, but even small, consistent efforts can lead
+                to meaningful improvements. These lessons encourage me to
+                continue developing both my knowledge and skills, alongside my
+                patience, compassion, and sense of responsibility needed to
+                serve individuals, families, and communities.
+              </p>
+            </div>
+          </article>
+
+          <!-- Person 9 -->
+          <article class="reveal bg-paper p-8 md:p-10">
+            <div class="flex gap-5 items-center">
+              <img
+                src="/img/punsalan.jpg"
+                alt="Member portrait"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <p class="text-xs text-orange uppercase tracking-[2px]">
+                  Member 09
+                </p>
+                <h3 class="font-serif text-2xl mt-1">Punsalan, Marielle M.</h3>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs uppercase tracking-[2px] text-muted">
+                My learning summary
+              </p>
+              <p class="leading-8 text-muted mt-3">
+                Before taking Community Health Nursing I, I understood nursing
+                primarily through the care given to a patient, the illness to be
+                addressed, the symptoms to be managed, and the interventions
+                needed for recovery. However, throughout this course, I began to
+                understand that health is rarely an individual experience.
+                Behind a patient's condition is a family whose routines may be
+                disrupted, whose resources may be stretched, whose decisions may
+                be influenced by limited knowledge, and whose members may be
+                carrying worries they do not always know how to express. I
+                realized that when one person becomes ill, the effects do not
+                necessarily end with that person. Sometimes, an entire household
+                learns to adjust, sacrifice, and live around an illness. This
+                changed how I understand the responsibility of a community
+                health nurse: we do not simply care for the person who is sick;
+                we must also learn to see the people, circumstances, and
+                environment that shape that person's health. One of the most
+                meaningful things I learned was the importance of the Family
+                Nursing Process. It taught me that providing appropriate care
+                begins long before an intervention is implemented. We must first
+                understand the family, its structure, relationships, health
+                practices, beliefs, available resources, and existing concerns.
+                Through assessment, we identify not only the problems that need
+                attention but also the strengths that can help a family overcome
+                them. Nursing diagnoses allow us to recognize and prioritize
+                their health concerns, while planning and implementation guide
+                us in developing interventions that are realistic, appropriate,
+                and responsive to their needs. Evaluation, meanwhile, reminds us
+                that our responsibility does not end once an intervention has
+                been carried out. We must determine whether it has actually
+                helped and whether further action is necessary. This process
+                made me realize that families should never be treated as passive
+                recipients of instructions. They must be heard, involved,
+                respected, and empowered to participate in decisions concerning
+                their own health. I also developed a deeper appreciation for
+                evidence-based practice. Good intentions are important in
+                nursing, but they are not enough. An intervention may appear
+                helpful, and advice may be given with the sincerest concern, but
+                we must still ask whether it is safe, appropriate, and supported
+                by reliable evidence. Through our discussions and activities on
+                research appraisal and evidence-based community health
+                practices, I learned that nursing decisions should be guided by
+                credible research, professional knowledge, and an understanding
+                of the actual circumstances of the people receiving care. This
+                is especially important in communities where access to
+                healthcare, financial limitations, health beliefs, and
+                misinformation may influence a family's ability to maintain its
+                health. Evidence-based practice allows us to provide more than
+                familiar advice or assumptions; it gives us a stronger
+                foundation for recommending interventions that can make a
+                meaningful difference. At the same time, evidence must be
+                applied with consideration for the family's individual needs and
+                available resources. What works in one setting may not be
+                immediately practical in another. I also came to appreciate that
+                health promotion and disease prevention are not always found in
+                major interventions or dramatic improvements. Sometimes, their
+                impact begins with a parent understanding the importance of
+                completing a child's immunization, a family recognizing an
+                unhealthy practice, a barangay health worker providing
+                appropriate guidance, or a household learning how to manage an
+                existing condition. These may seem like small contributions, but
+                their effects can extend beyond one person and influence the
+                health of an entire family and community. I learned that
+                community health nursing requires patience, collaboration,
+                continuous education, proper documentation, and an understanding
+                of the realities that people face. It also requires us to
+                approach individuals and families without immediately judging
+                their decisions, because what may appear to be neglect or
+                noncompliance could be rooted in circumstances we have not yet
+                taken the time to understand. Above all, this course reminded me
+                that becoming a nurse is not simply about knowing what should be
+                done. It is also about understanding whom we are doing it for
+                and whether our actions genuinely make their lives better. The
+                Family Nursing Process gives us a systematic way to understand,
+                address, and evaluate the health needs of families, while
+                evidence-based practice ensures that the care we provide is
+                informed, safe, and effective. Together, they teach us to
+                approach nursing with both competence and compassion. As I
+                continue my journey as a nursing student and eventually become a
+                community health nurse, I hope to carry this understanding into
+                every family I encounter. I want to be the kind of nurse who
+                does not simply see a diagnosis, a checklist, or a health
+                problem to be resolved, but recognizes the people behind them,
+                their struggles, their capabilities, their fears, and their
+                hopes for a healthier life. Because sometimes, improving a
+                family's health does not begin with changing everything about
+                their lives. It begins with taking the time to understand what
+                their lives are already like, meeting them where they are, and
+                helping them realize that better health is something they can
+                work toward, one decision and one act of care at a time.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <p class="text-xs text-muted mt-6">
+          Personal summaries are examples. Replace these with each member's
+          genuine reflection.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= MEMBER 01 REFLECTION ================= -->
+    <section id="reflection" class="py-24 px-6 lg:px-10 scroll-mt-24">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            Member 01 / Reflection
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Reflection on family<br /><span class="italic text-orange">health concerns.</span>
+          </h2>
+        </div>
+
+        <article class="reveal bg-paper p-8 md:p-10 mt-12 leading-8 text-muted">
+          <div class="flex gap-5 items-center mb-8">
+            <img
+              src="/img/916619186_2314035366039769_8295193481035587071_n.jpg"
+              alt="Lao, Frederich M."
+              class="w-16 h-16 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-xs text-orange uppercase tracking-[2px]">
+                Member 01
+              </p>
+              <h3 class="font-serif text-2xl text-ink">Lao, Frederich M.</h3>
+            </div>
+          </div>
+          <p>
+            I used to think that addressing a family's health concerns began
+            with identifying what was wrong and determining how to fix it.
+            However, this activity made me realize that sometimes, the biggest
+            health problem is not what we immediately see, but what we have yet
+            to understand. Through the CBL and PBL activities, I learned that
+            family health is deeply interconnected with one's living conditions,
+            financial capacity, health literacy, relationships, and access to
+            healthcare. A nursing intervention may be medically appropriate,
+            but if it does not consider the family's actual circumstances, how
+            effective can it really be?
+          </p>
+          <p class="mt-6">
+            One challenge I encountered was looking beyond the obvious health
+            concerns and determining which problems deserved priority.
+            Translating theoretical concepts into realistic, practical
+            interventions also required careful consideration. I addressed
+            these difficulties by reviewing relevant CHN concepts, exchanging
+            insights with my groupmates, and examining the situation from
+            different perspectives. This taught me that sound nursing decisions
+            are not made through assumptions, but through proper assessment,
+            evidence, and an understanding of the people involved.
+          </p>
+          <p class="mt-6">
+            As a future community health nurse, I want to carry one important
+            realization with me: I should never expect families to follow a
+            health plan that fails to understand the realities they live in. I
+            must learn to listen before educating, assess before intervening,
+            and understand before judging. After all, community health nursing
+            is not about entering a community with all the answers; it is about
+            working with people to find solutions they can sustain. Ultimately,
+            I hope to become a nurse who does not simply bring healthcare closer
+            to families, but also makes them feel that better health is within
+            their reach.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= MEMBER 03 REFLECTION ================= -->
+    <section id="reflection-member-03" class="py-24 bg-[#FBEAEC] px-6 lg:px-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            Member 03 / Reflection
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Reflection on the<br /><span class="italic text-orange">family functions.</span>
+          </h2>
+        </div>
+
+        <article class="reveal bg-paper p-8 md:p-10 mt-12 leading-8 text-muted">
+          <div class="flex gap-5 items-center mb-8">
+            <img
+              src="/img/malimban.jpg"
+              alt="Malimban, Jillyan Jade S."
+              class="w-16 h-16 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-xs text-orange uppercase tracking-[2px]">
+                Member 03
+              </p>
+              <h3 class="font-serif text-2xl text-ink">
+                Malimban, Jillyan Jade S.
+              </h3>
+            </div>
+          </div>
+          <p>
+            Studying the seven functions of the family made me realize that a
+            lot of what we know about taking care of ourselves actually starts
+            at home. Out of all the functions, the educational function stood
+            out to me the most because I realized that my family was my first
+            teacher. Even before I learned about health in school, my parents
+            and other family members were already teaching me simple things,
+            like keeping myself clean, taking care of my body, respecting other
+            people, and making good decisions. At first, these things seemed
+            like ordinary reminders that we hear every day. But after learning
+            about the family functions, I realized that they are actually
+            important because they help shape our habits as we grow up. For
+            example, being reminded to wash our hands, eat properly, and
+            practice good hygiene may seem simple, but these habits can help
+            protect us from getting sick. It made me appreciate how much the
+            lessons we learn at home can affect our health.
+          </p>
+          <p class="mt-6">
+            As a nursing student, I can also see how this lesson connects to
+            our future work. When we care for a patient, we should not focus
+            only on the illness or the treatment needed. We should also
+            understand the person's family and the environment they go home
+            to. Their habits, decisions, and ability to take care of their
+            health may be influenced by what they have learned from their
+            family. Activity 3 reminded me that being a nurse is not only about
+            giving medicines or providing treatment. It also involves teaching
+            patients and their families how to take care of themselves. In the
+            future, I want to be able to share what I know in a way that
+            families can easily understand and apply in their everyday lives.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= MEMBER 04 REFLECTION ================= -->
+    <section id="reflection-member-04" class="py-24 px-6 lg:px-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            Member 04 / Reflection
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Reflection on<br /><span class="italic text-orange">teamwork.</span>
+          </h2>
+        </div>
+
+        <article class="reveal bg-paper p-8 md:p-10 mt-12 leading-8 text-muted">
+          <div class="flex gap-5 items-center mb-8">
+            <img
+              src="/img/lizzie.jpg"
+              alt="Masgong, Lizzie France D."
+              class="w-16 h-16 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-xs text-orange uppercase tracking-[2px]">
+                Member 04
+              </p>
+              <h3 class="font-serif text-2xl text-ink">
+                Masgong, Lizzie France D.
+              </h3>
+            </div>
+          </div>
+          <p>
+            Through our group activities in Community Health Nursing, I learned
+            the importance of teamwork, cooperation, and sharing ideas. I
+            realized that working with others allows me to understand different
+            perspectives and learn things beyond what I can learn individually.
+            These activities also helped me appreciate how community health
+            nursing requires collaboration, communication, and active
+            participation to address the health needs of individuals and
+            families. However, I also encountered challenges, such as having
+            different opinions, coordinating with my groupmates, and managing
+            our time to complete the given tasks. There were also moments when
+            I found it difficult to understand certain concepts and relate them
+            to actual community situations. We addressed these challenges
+            through proper communication, listening to one another's
+            suggestions, dividing responsibilities, and helping each other
+            whenever someone had difficulty.
+          </p>
+          <p class="mt-6">
+            Through these experiences, I learned to become more patient,
+            open-minded, and responsible as a group member. As a future
+            Community Health Nurse, I can apply these learnings by developing
+            good teamwork and communication skills when working with other
+            healthcare professionals and community members. I realized that
+            providing quality healthcare is not something that a nurse can
+            accomplish alone. It requires collaboration, respect, and a shared
+            commitment to improving the health of the community. Most
+            importantly, I want to become a nurse who knows how to listen,
+            contribute, and support others because I believe that working
+            together is an important part of providing effective and
+            compassionate community healthcare.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= MEMBER 05 REFLECTION ================= -->
+    <section id="reflection-member-05" class="py-24 bg-[#FBEAEC] px-6 lg:px-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            Member 05 / Reflection
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Reflection on<br /><span class="italic text-orange">family role-play.</span>
+          </h2>
+        </div>
+
+        <article class="reveal bg-paper p-8 md:p-10 mt-12 leading-8 text-muted">
+          <div class="flex gap-5 items-center mb-8">
+            <img
+              src="/img/918253234_1136982635865788_6075743647831113075_n.jpg"
+              alt="Mendoza, Tyrelle L."
+              class="w-16 h-16 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-xs text-orange uppercase tracking-[2px]">
+                Member 05
+              </p>
+              <h3 class="font-serif text-2xl text-ink">Mendoza, Tyrelle L.</h3>
+            </div>
+          </div>
+          <p>
+            One activity that helped me understand Community Health Nursing
+            better was our family role-play. I learned that during a home
+            visit, we should not focus only on the family member who has an
+            illness but also take time to assess everyone in the household.
+            Each member has different health needs, responsibilities, and
+            situations that may affect the family's overall well-being. I
+            realized that even if one person is the main concern, the health of
+            the other family members should not be overlooked.
+          </p>
+          <p class="mt-6">
+            At first, it was challenging to understand how all the different
+            roles and situations within a family could affect their health.
+            However, as we performed the role-play and discussed the case, I
+            started to see how important each family member is when assessing a
+            household. It also helped me understand that a home visit is not
+            just about checking on a patient but about getting to know the
+            family and their everyday situation.
+          </p>
+          <p class="mt-6">
+            Looking back, I can say that the activities we completed throughout
+            CHN I helped me understand community health nursing beyond what we
+            discussed in class. They gave me a better idea of what nurses
+            actually do when working with families and communities. As a future
+            community health nurse, I want to apply what I learned by being
+            more observant during home visits and making sure that every family
+            member is given attention. After all, understanding the family as a
+            whole helps us provide care that better fits their needs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= MEMBER 06 REFLECTION ================= -->
+    <section id="reflection-member-06" class="py-24 bg-[#FBEAEC] px-6 lg:px-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            Member 06 / Reflection
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Reflection on<br /><span class="italic text-orange">community nursing.</span>
+          </h2>
+        </div>
+
+        <article class="reveal bg-paper p-8 md:p-10 mt-12 leading-8 text-muted">
+          <div class="flex gap-5 items-center mb-8">
+            <img
+              src="/img/mirasol.jpg"
+              alt="Mirasol, Jazyll Criosa U."
+              class="w-16 h-16 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-xs text-orange uppercase tracking-[2px]">
+                Member 06
+              </p>
+              <h3 class="font-serif text-2xl text-ink">
+                Mirasol, Jazyll Criosa U.
+              </h3>
+            </div>
+          </div>
+          <p>
+            My experience in our Community Health Nursing (CHN) activities has
+            helped me understand that nursing is not only about caring for
+            patients inside hospitals but also about reaching out to families
+            and communities where they live. Through Activity 4 and 5, I
+            learned that every family has their own health concerns, struggles,
+            and needs that require patience, understanding, and proper
+            attention. I realized that being a community health nurse means
+            looking beyond a person's illness and considering their environment,
+            lifestyle, family support, and access to healthcare. Some activities
+            challenged me, especially when identifying health problems, planning
+            appropriate interventions, and understanding how to apply nursing
+            concepts in real-life situations. However, these experiences helped
+            me become more observant, responsible, and open to learning. They
+            also taught me that even simple health teachings, proper
+            communication, and small acts of support can make a difference in
+            someone's life.
+          </p>
+          <p class="mt-6">
+            Overall, CHN taught me the importance of compassion, teamwork,
+            patience, and understanding when providing care. It made me realize
+            that not everyone has the same resources or opportunities to
+            maintain good health, which is why nurses play an important role in
+            promoting health and preventing illness within the community. As a
+            future nurse, I want to carry these lessons with me by being someone
+            who listens to people's concerns, respects their situations, and
+            provides care without judgment. I know that I still have a lot to
+            learn and improve, but this experience has helped me appreciate the
+            true purpose of community nursing. It reminded me that nursing is
+            not just about treating illnesses but also about educating,
+            supporting, and empowering people to take better care of themselves
+            and their families.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= MEMBER 07 REFLECTION ================= -->
+    <section id="reflection-member-07" class="py-24 px-6 lg:px-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            Member 07 / Reflection
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Reflection on<br /><span class="italic text-orange">family functions.</span>
+          </h2>
+        </div>
+
+        <article class="reveal bg-paper p-8 md:p-10 mt-12 leading-8 text-muted">
+          <div class="flex gap-5 items-center mb-8">
+            <img
+              src="/img/noses.jpg"
+              alt="Noses, Lois Marielle S."
+              class="w-16 h-16 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-xs text-orange uppercase tracking-[2px]">
+                Member 07
+              </p>
+              <h3 class="font-serif text-2xl text-ink">
+                Noses, Lois Marielle S.
+              </h3>
+            </div>
+          </div>
+          <p>
+            As a second-year nursing student, I did not expect an activity
+            about my own family to teach me so much. Before this, I only
+            thought of family as the people I live with and go home to. Now I
+            know that a family has seven functions, which are biological,
+            economic, educational, psychological, recreational, protective, and
+            spiritual, and that each one affects the physical, emotional, and
+            social health of every member. When I thought about my own family,
+            I realized that even small things, like eating together and checking
+            on each other, are ways we take care of one another, and it made me
+            appreciate them more. The hardest part for me was explaining our
+            assigned family function clearly, giving a real example, and
+            connecting it to health and nursing recommendations in such a short
+            time. Recording it as a video and working with my partner online
+            also made it challenging.
+          </p>
+          <p class="mt-6">
+            To handle this, I went back to our lecture and thought about my own
+            family during the Think phase, so I had a real example ready. My
+            partner and I divided our parts, listened to each other's ideas,
+            and practiced once before recording, which made me feel more
+            confident. As a future community health nurse, I now know that I
+            should care for the whole family, not just the patient. I want to
+            notice which family functions are weak and give health teaching and
+            referrals that fit their situation without judging them, because
+            every family has its own struggles and strengths. I am still
+            learning, but I hope that by helping families grow stronger, I can
+            help make my community healthier.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= MEMBER 08 REFLECTION ================= -->
+    <section id="reflection-member-08" class="py-24 bg-[#FBEAEC] px-6 lg:px-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            Member 08 / Reflection
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Reflection on<br /><span class="italic text-orange">client-centered care.</span>
+          </h2>
+        </div>
+
+        <article class="reveal bg-paper p-8 md:p-10 mt-12 leading-8 text-muted">
+          <div class="flex gap-5 items-center mb-8">
+            <img
+              src="/img/lira.jpg"
+              alt="Panaligan, Lira Grace E."
+              class="w-16 h-16 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-xs text-orange uppercase tracking-[2px]">
+                Member 08
+              </p>
+              <h3 class="font-serif text-2xl text-ink">
+                Panaligan, Lira Grace E.
+              </h3>
+            </div>
+          </div>
+          <p>
+            I learned that community health nursing involves understanding not
+            only the patient's illness but also their lifestyle, preferences,
+            and family situation. Managing diabetes requires realistic changes,
+            proper guidance, and respect for the patient's choices. One
+            challenge was balancing the grandmother's health needs with her
+            personal preferences and the daughter's concerns as a caregiver. I
+            considered both perspectives and focused on client-centered care,
+            open communication, shared decision-making, and practical health
+            education. I will keep these lessons in mind by listening to
+            patients, understanding their needs, and encouraging small,
+            sustainable lifestyle changes rather than simply giving
+            instructions.
+          </p>
+          <p class="mt-6">
+            Effective community health nursing should be paired with and guided
+            by research and actual community needs. Education, technology, and
+            collaboration with barangay health workers can improve healthcare
+            delivery. Understanding research findings and identifying how they
+            can be applied in communities with limited resources and different
+            health beliefs were challenging. I focused on the studies' findings,
+            target populations, and recommended interventions to understand the
+            practical value they bring in community settings. From now on, the
+            use of evidence-based information is a standard I will set when
+            providing health education, promoting disease prevention, and
+            improving not just one family's condition, but continuing to work
+            with the community to shed light on the small health-related matters
+            that make a major difference in the long run.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= MEMBER 09 REFLECTION ================= -->
+    <section id="reflection-member-09" class="py-24 px-6 lg:px-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal">
+          <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+            Member 09 / Reflection
+          </p>
+          <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+            Reflection on<br /><span class="italic text-orange">family care.</span>
+          </h2>
+        </div>
+
+        <article class="reveal bg-paper p-8 md:p-10 mt-12 leading-8 text-muted">
+          <div class="flex gap-5 items-center mb-8">
+            <img
+              src="/img/punsalan.jpg"
+              alt="Punsalan, Marielle M."
+              class="w-16 h-16 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-xs text-orange uppercase tracking-[2px]">
+                Member 09
+              </p>
+              <h3 class="font-serif text-2xl text-ink">
+                Punsalan, Marielle M.
+              </h3>
+            </div>
+          </div>
+          <p>
+            My favorite activity is probably where we did roleplay of how one's
+            condition affects all the members involved with them. It is an
+            eye-opener for me, especially because we actually tried to put
+            ourselves in that situation and understand how to correlate and do
+            interventions for patients. One thing to know about taking care of
+            one dependent family member is not only solely the affected one but
+            also the people who surround them that probably experience
+            different burdens, which could be a big factor on the latter if
+            ignored. The activity allowed me to look back on our learning
+            experiences throughout Community Health Nursing I and recognize how
+            each activity contributed to my understanding of family and
+            community health nursing.
+          </p>
+          <p class="mt-6">
+            I also enjoyed organizing our previous outputs, and connecting them
+            with the course concepts helped me appreciate the importance of
+            applying theoretical knowledge to actual nursing practice. One of
+            the challenges I encountered was compiling and arranging the
+            different activities while ensuring that the information presented
+            was complete, accurate, and organized. I addressed this by
+            reviewing our previous outputs, identifying the important concepts
+            and learning outcomes, and arranging the information according to
+            the required sections. Through this activity, I realized that an
+            e-portfolio is not merely a compilation of academic requirements
+            but also a reflection of one's growth, experiences, and developing
+            competencies. As a future community health nurse, I will continue
+            to practice self-evaluation, maintain proper documentation, and
+            pursue continuous learning to provide effective, evidence-based,
+            and compassionate care to individuals, families, and communities.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <!-- <section class="overflow-hidden bg-orange py-5">
+      <div class="marquee-track flex whitespace-nowrap w-max">
+        <div
+          class="flex items-center gap-8 px-4 text-paper font-serif text-2xl md:text-4xl"
+        >
+          <span>Learn</span><span>✳</span> <span>Collaborate</span
+          ><span>✳</span> <span>Create</span><span>✳</span> <span>Reflect</span
+          ><span>✳</span> <span>Grow</span><span>✳</span> <span>Learn</span
+          ><span>✳</span> <span>Collaborate</span><span>✳</span>
+          <span>Create</span><span>✳</span> <span>Reflect</span><span>✳</span>
+          <span>Grow</span><span>✳</span>
+        </div>
+        <div
+          class="flex items-center gap-8 px-4 text-paper font-serif text-2xl md:text-4xl"
+          aria-hidden="true"
+        >
+          <span>Learn</span><span>✳</span> <span>Collaborate</span
+          ><span>✳</span> <span>Create</span><span>✳</span> <span>Reflect</span
+          ><span>✳</span> <span>Grow</span><span>✳</span> <span>Learn</span
+          ><span>✳</span> <span>Collaborate</span><span>✳</span>
+          <span>Create</span><span>✳</span> <span>Reflect</span><span>✳</span>
+          <span>Grow</span><span>✳</span>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-ink text-paper pt-20 pb-8 px-6 lg:px-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-10 pb-16">
+          <div class="md:col-span-7">
+            <p class="uppercase tracking-[3px] text-xs text-white/40 mb-6">
+              Our student portfolio
+            </p>
+            <h2 class="font-serif text-5xl md:text-7xl leading-tight">
+              We are still<br />
+              <span class="italic text-orange">becoming.</span>
+            </h2>
+            <p class="text-white/50 leading-7 mt-6 max-w-md">
+              Every project is a new opportunity to learn, connect, and create
+              something meaningful together.
+            </p>
+          </div>
+
+          <div class="md:col-span-2 md:col-start-9">
+            <p class="text-xs uppercase tracking-[2px] text-white/40 mb-6">
+              Navigate
+            </p>
+            <div class="flex flex-col gap-3 text-sm">
+              <a href="#home" class="hover:text-orange transition">Home</a>
+              <a href="#profile" class="hover:text-orange transition"
+                >Group Profile</a
+              >
+              <a href="#members" class="hover:text-orange transition"
+                >Members</a
+              >
+            
+              <a href="activities.html" class="hover:text-orange transition"
+                >Activities</a
+              >
+              <a href="#reflection" class="hover:text-orange transition"
+                >Reflection</a
+              >
+              <a href="#learning" class="hover:text-orange transition"
+                >Learning</a
+              >
+            </div>
+          </div>
+
+          <div class="md:col-span-2">
+            <p class="text-xs uppercase tracking-[2px] text-white/40 mb-6">
+              Our values
+            </p>
+            <div class="flex flex-col gap-3 text-sm text-white/70">
+              <span>Collaboration</span>
+              <span>Growth</span>
+              <span>Creativity</span>
+              <span>Respect</span>
+              <span>Curiosity</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/15 pt-6 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/40"
+        >
+          <p>© 2026 Our Nursing Group. Student Portfolio.</p>
+          <a href="#home" class="hover:text-orange transition">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= BACK TO TOP ================= -->
+    <button
+      id="backToTop"
+      class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-forest text-paper flex items-center justify-center shadow-lg hover:bg-orange transition-colors"
+      aria-label="Back to top"
+    >
+      ↑
+    </button>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="app.js"></script>
+  </body>
+</html>

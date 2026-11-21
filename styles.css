@@ -1,0 +1,25 @@
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { font-family: 'DM Sans', sans-serif; background: #FFF8F7; }
+::selection { color: #FFF8F7; background: #8F1D2C; }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.show { opacity: 1; transform: translateY(0); }
+.nav-link { position: relative; transition: color .3s ease; }
+.nav-link::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: #C43D4B; transition: width .3s ease; }
+.nav-link:hover::after { width: 100%; }
+.image-hover { transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+.image-container:hover .image-hover { transform: scale(1.06); }
+.activity-card { transition: transform .4s ease, box-shadow .4s ease; }
+.activity-card:hover { transform: translateY(-6px); box-shadow: 0 15px 35px rgba(143,29,44,.12); }
+.hamburger span { transition: transform .3s ease, opacity .3s ease; }
+.hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.marquee-track { animation: marquee 25s linear infinite; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+#backToTop { opacity: 0; pointer-events: none; transition: all .3s ease; transform: translateY(10px); }
+#backToTop.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+button:focus-visible, a:focus-visible { outline: 3px solid #E598A2; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .reveal { opacity: 1; transform: none; }
+}

@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGHC-Student Portfolio</title>
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/img/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              paper: "#FFF8F7",
+              ink: "#3B1117",
+              forest: "#8F1D2C",
+              orange: "#C43D4B",
+              muted: "#8B6F73",
+              line: "#E9C9CD",
+            },
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-paper/90 backdrop-blur-md border-b border-line"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-6 lg:px-10 h-[76px] flex items-center justify-between"
+      >
+        <a href="index.html#home" class="flex items-center gap-3">
+          <div
+            class="w-9 h-9 bg-forest text-paper rounded-full flex items-center justify-center font-serif text-lg"
+          >
+            G
+          </div>
+          <div>
+            <p class="font-bold text-sm tracking-tight">NURSING PORTFOLIO</p>
+            <p class="text-[10px] text-muted tracking-[2px] uppercase">
+              Caring together
+            </p>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-7 text-sm">
+          <a href="index.html#home" class="nav-link">Home</a>
+          <a href="index.html#profile" class="nav-link">Group Profile</a>
+          <a href="index.html#members" class="nav-link">Members</a>
+          <a href="activities.html" class="nav-link">Activities</a>
+          <a href="index.html#reflection" class="nav-link">Reflection</a>
+          <a href="index.html#learning" class="nav-link">Learning</a>
+        </div>
+        <button
+          id="menuButton"
+          class="hamburger lg:hidden flex flex-col gap-[4px] p-2"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="w-6 h-[2px] bg-ink block"></span
+          ><span class="w-6 h-[2px] bg-ink block"></span
+          ><span class="w-6 h-[2px] bg-ink block"></span>
+        </button>
+      </nav>
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-paper border-t border-line"
+      >
+        <div class="flex flex-col px-6 py-5 gap-5 text-sm">
+          <a href="index.html#home" class="mobile-link">Home</a
+          ><a href="index.html#profile" class="mobile-link">Group Profile</a>
+          <a href="index.html#members" class="mobile-link">Members</a>
+          <a href="activities.html" class="mobile-link">Activities</a
+          ><a href="index.html#reflection" class="mobile-link">Reflection</a>
+          <a href="index.html#learning" class="mobile-link">Learning</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-[76px]">
+      <section id="activities" class="py-24 bg-white px-6 lg:px-10">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="reveal flex flex-col md:flex-row justify-between md:items-end gap-8"
+          >
+            <div>
+              <p class="uppercase tracking-[3px] text-xs text-muted mb-4">
+                Our work
+              </p>
+              <h1 class="font-serif text-5xl md:text-7xl">
+                Activities &<br />experiences.
+              </h1>
+            </div>
+            <p class="text-muted leading-7 max-w-sm">
+              A closer look at the activities that challenged us, brought us
+              together, and helped us learn something new.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center mt-16 reveal">
+            <div class="image-container overflow-hidden">
+              <img
+                src="/img/studmain.jpg"
+                alt="Students working together"
+                class="image-hover w-full h-[300px] md:h-[440px] object-cover"
+              />
+            </div>
+            <div>
+              <p class="text-orange uppercase tracking-[2px] text-xs">
+                Activity 01
+              </p>
+              <h2 class="font-serif text-4xl mt-4">
+                Case-Based Learning (CBL): Applying Community Health Nursing
+                Concepts in Family Care
+              </h2>
+              <p class="text-muted leading-8 mt-5">
+                The Case-Based Learning (CBL) activity involved examining and
+                analyzing a family health case to apply the fundamental concepts
+                and principles of Community Health Nursing. Through the given
+                situation, the group explored the family’s health conditions,
+                identified existing and potential health concerns, and
+                considered the factors influencing its overall well-being. The
+                activity provided an opportunity to connect theoretical nursing
+                concepts with realistic family healthcare situations.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center mt-20 reveal">
+            <div class="image-container overflow-hidden">
+              <img
+                src="/img/stud2.jpg"
+                alt="Creative group project"
+                class="image-hover w-full h-[300px] md:h-[440px] object-cover"
+              />
+            </div>
+            <div class="md:order-1">
+              <p class="text-orange uppercase tracking-[2px] text-xs">
+                Activity 1B
+              </p>
+              <h2 class="font-serif text-4xl mt-4">
+                Problem-Based Learning (PBL) Title: How Can We Improve the
+                Health of the Family?
+              </h2>
+              <p class="text-muted leading-8 mt-5">
+                The Problem-Based Learning (PBL) activity focused on identifying
+                and addressing family health concerns through collaborative
+                problem-solving and critical analysis. The group examined a
+                presented health situation, explored its underlying causes and
+                contributing factors, and formulated appropriate strategies to
+                improve the family’s health. The activity encouraged the
+                application of Community Health Nursing principles, available
+                healthcare resources, and evidence-based information in
+                developing practical solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center mt-20 reveal">
+            <div class="image-container overflow-hidden">
+              <img
+                src="/img/stud3.jpeg"
+                alt="Creative group project"
+                class="image-hover w-full h-[300px] md:h-[440px] object-cover"
+              />
+            </div>
+            <div>
+              <p class="text-orange uppercase tracking-[2px] text-xs">
+                Activity 2A
+              </p>
+              <h2 class="font-serif text-4xl mt-4">
+                Concept Mapping on Community Health Nursing Concepts
+              </h2>
+              <p class="text-muted leading-8 mt-5">
+                Activity #2 was a 90-minute, face-to-face collaborative learning
+                activity where our group built a concept map with "Community
+                Health Nursing" at the center. The session started with an
+                orientation and a faculty demonstration of concept mapping,
+                followed by group planning and map-making, a group presentation,
+                and a faculty debriefing and reflection. Our concept map
+                connected the required concepts using hierarchical levels,
+                arrows, and linking words, and we explained it in an oral
+                presentation.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center mt-20 reveal">
+            <div class="image-container overflow-hidden">
+              <img
+                src="/img/stud5.jfif"
+                alt="Creative group project"
+                class="image-hover w-full h-[300px] md:h-[440px] object-cover"
+              />
+            </div>
+            <div class="md:order-1">
+              <p class="text-orange uppercase tracking-[2px] text-xs">
+                Activity 2B
+              </p>
+              <h2 class="font-serif text-4xl mt-4">
+                Video Analysis: The Role of Community Health Nurse in Building
+                Healthy Communities
+              </h2>
+              <p class="text-muted leading-8 mt-5">
+                This activity was a video analysis on the role of the Community
+                Health Nurse (CHN) in building healthy communities. After
+                watching the video, we answered a set of guide questions in six
+                parts: recall and understanding, roles of the community health
+                nurse, application of concepts, Sustainable Development Goals
+                (SDGs), Universal Health Care (RA 11223), and critical thinking.
+                We ended with reflection questions about what we realized and
+                how the video changed our understanding of CHN.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center mt-20 reveal">
+            <div class="image-container overflow-hidden">
+              <img
+                src="/img/stud6.jpeg"
+                alt="Creative group project"
+                class="image-hover w-full h-[300px] md:h-[440px] object-cover"
+              />
+            </div>
+            <div>
+              <p class="text-orange uppercase tracking-[2px] text-xs">
+                Activity 4
+              </p>
+              <h2 class="font-serif text-4xl mt-4">
+                Flipped Classroom - Planning and Conducting a Home Visit
+              </h2>
+              <p class="text-muted leading-8 mt-5">
+                This activity focused on planning and conducting a community
+                home visit through the case of the Dela Cruz family. Our group
+                assessed the health condition of Mr. Jose Dela Cruz, a
+                76-year-old older adult experiencing memory loss, confusion, and
+                possible dementia. We identified several family health concerns,
+                including the risk of wandering, improper medication management,
+                unsafe home conditions, and caregiver stress experienced by his
+                wife and daughter. We also developed appropriate nursing
+                interventions, health teachings, safety measures, and community
+                referrals to address the family’s needs and promote Mr. Jose’s
+                well-being.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center mt-20 reveal">
+             <div class="image-container overflow-hidden">
+              <img
+                src="/img/stud7.jpg"
+                alt="Creative group project"
+                class="image-hover w-full h-[300px] md:h-[440px] object-cover"
+              />
+            </div>
+            <div class="md:order-1">
+              <p class="text-orange uppercase tracking-[2px] text-xs">
+                Activity 5
+              </p>
+              <h2 class="font-serif text-4xl mt-4">
+                Evidence Appraisal on Evidence-Based Interventions
+              </h2>
+              <p class="text-muted leading-8 mt-5">
+                This activity focused on reviewing and evaluating a research
+                article entitled “The Effectiveness of Family Health
+                Conversations Delivered by Nurses: A Systematic Review” by
+                Ostergaard et al. (2026). Our group examined how nurse-led
+                Family Health Conversations (FHCs) can help families dealing
+                with critical or chronic illnesses. We discussed the study’s
+                purpose, research methods, major findings, strengths,
+                limitations, and applicability to Filipino families and
+                communities. We also applied the evidence from the article to a
+                Family Nursing Care Plan (FNCP), focusing on improving family
+                communication, emotional support, and shared caregiving
+                responsibilities.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center mt-20 reveal">
+            <div class="image-container overflow-hidden">
+              <img
+                src="/img/stud8.jfif"
+                alt="Creative group project"
+                class="image-hover w-full h-[300px] md:h-[440px] object-cover"
+              />
+            </div>
+            <div>
+              <p class="text-orange uppercase tracking-[2px] text-xs">
+                Activity 6
+              </p>
+              <h2 class="font-serif text-4xl mt-4">
+                The Dela Cruz Family: Diabetes Management
+              </h2>
+              <p class="text-muted leading-8 mt-5">
+                The activity focused on developing a community-based nursing
+                care plan for a 60-year-old grandmother diagnosed with Type 2
+                diabetes. The situation highlighted her unhealthy beverage
+                choices, irregular eating patterns, and the importance of
+                maintaining independence in managing her condition. It also
+                addresses the daughter’s role as a caregiver and the need to
+                improve family communication. It involved identifying the
+                family’s health problems, promoting healthy lifestyle practices,
+                providing family health education, applying client-centered
+                care, identifying community resources, and establishing
+                appropriate referral pathways.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center mt-20 reveal">
+            <div class="image-container overflow-hidden">
+              <img
+                src="/img/stud5.jfif"
+                alt="Creative group project"
+                class="image-hover w-full h-[300px] md:h-[440px] object-cover"
+              />
+            </div>
+            <div>
+              <p class="text-orange uppercase tracking-[2px] text-xs">
+                Activity 7
+              </p>
+              <h2 class="font-serif text-4xl mt-4">
+                Best Practices in Community Health Nursing Care
+              </h2>
+              <p class="text-muted leading-8 mt-5">
+                The activity focused on identifying, discussing, and presenting
+                evidence-based best practices in community health nursing. It
+                discussed three major interventions: community-based childhood
+                immunization education and outreach, the use of an Immunization
+                Management Information System (IMIS), and diabetes
+                self-management education through trained Barangay Health
+                Workers (BHWs). It also explored their supporting research,
+                target populations, implementation, and expected health outcomes
+                in Philippine communities.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center mt-20 reveal">
+            <div class="image-container overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=85"
+                alt="Creative group project"
+                class="image-hover w-full h-[300px] md:h-[440px] object-cover"
+              />
+            </div>
+            <div>
+              <p class="text-orange uppercase tracking-[2px] text-xs">
+                Activity 8
+              </p>
+              <h2 class="font-serif text-4xl mt-4">E-Portfolio Development</h2>
+              <p class="text-muted leading-8 mt-5">
+                The activity focused on developing an electronic portfolio that
+                compiles and showcases our group’s learning experiences,
+                academic outputs, and understanding of the concepts and
+                principles of Community Health Nursing I. It involved organizing
+                our previous activities, documenting our learning achievements,
+                presenting our reflections, and demonstrating how the knowledge
+                and skills gained throughout the course can be applied to family
+                and community health nursing practice. The portfolio also served
+                as a record of our academic progress and professional
+                development as future community health nurses.
+              </p>
+            </div>
+          </div>
+
+         
+          </div>
+        </div>
+      </section>
+    </main>
+    <button
+      id="backToTop"
+      class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-forest text-paper flex items-center justify-center shadow-lg hover:bg-orange transition-colors"
+      aria-label="Back to top"
+    >
+      ↑
+    </button>
+    <script src="app.js"></script>
+  </body>
+</html>
